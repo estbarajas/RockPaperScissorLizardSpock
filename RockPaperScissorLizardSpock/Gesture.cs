@@ -16,6 +16,7 @@ namespace RockPaperScissorLizardSpock
 
         public void beats(string name)
         {
+            
 
         }
     }

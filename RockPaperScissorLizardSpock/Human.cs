@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorLizardSpock
 {
-    class ComputerPlayer : Player
+    class Human: Player
     {
-        public ComputerPlayer()
+        public Human(string name)
         {
-            this.name = "Computer";
+            this.name = name;
             this.score = 0;
         }
     }
