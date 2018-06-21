@@ -10,15 +10,8 @@ namespace RockPaperScissorLizardSpock
     {
         static void Main(string[] args)
         {
-            /*
-            HumanPlayer theHuman = new HumanPlayer("joe");
-            theHuman.getName();
-            theHuman.increaseScore();
-            theHuman.increaseScore();
-            theHuman.increaseScore();
-            theHuman.getScore();
+            Console.WriteLine("test");
             Console.ReadLine();
-            */
         }
     }
 }
