@@ -1,0 +1,7 @@
+C:\Users\Esteban\Desktop\Projects\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\bin\Debug\RockPaperScissorLizardSpock.exe.config
+C:\Users\Esteban\Desktop\Projects\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\bin\Debug\RockPaperScissorLizardSpock.exe
+C:\Users\Esteban\Desktop\Projects\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\bin\Debug\RockPaperScissorLizardSpock.pdb
+C:\Users\Esteban\Desktop\Projects\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\obj\Debug\RockPaperScissorLizardSpock.csprojAssemblyReference.cache
+C:\Users\Esteban\Desktop\Projects\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\obj\Debug\RockPaperScissorLizardSpock.csproj.CoreCompileInputs.cache
+C:\Users\Esteban\Desktop\Projects\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\obj\Debug\RockPaperScissorLizardSpock.exe
+C:\Users\Esteban\Desktop\Projects\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\obj\Debug\RockPaperScissorLizardSpock.pdb
