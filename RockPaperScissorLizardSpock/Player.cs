@@ -10,6 +10,8 @@ namespace RockPaperScissorLizardSpock
     {
         public string name;
         public double score;
+        List<string> listOfGestures;
+
 
         public void getName()
         {
@@ -25,6 +27,21 @@ namespace RockPaperScissorLizardSpock
         public void getScore()
         {
             Console.WriteLine("The player " + name + " has a score of " + score + ".");
+        }
+
+        public string Gesture(string passedGesture)
+        {
+            string foundTheWord = "llun";
+            listOfGestures = new List<string>() {"Rock", "Paper", "Scissors", "Lizard", "Spock"};
+            foreach(string gesture in listOfGestures)
+            {
+                if(passedGesture.Equals(gesture.ToLower()))
+                {
+                    foundTheWord = gesture;
+                }
+            }
+            Console.WriteLine(foundTheWord);
+            return foundTheWord;
         }
 
         public void Beats(Player player)
