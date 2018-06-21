@@ -10,31 +10,39 @@ namespace RockPaperScissorLizardSpock
     {
         public Player theHuman;
         public Player theComputer;
+        public double winCondition;
         public string numberOfPlayers;
-
 
         public Game()
         {
-            setPlayers();
-            
+            winCondition = 2;
         }
 
-        public void setPlayers()
+        public void MainMenu()
+        {
+            SetPlayers();
+        }
+
+        public void SetPlayers() //initiate the player objects
         {
             Console.WriteLine("Is there one player or two? \nA) One \nB) Two" );
             numberOfPlayers = Console.ReadLine();
             if (numberOfPlayers == "a")
             {
-
+                Console.WriteLine("Player Vs Computer");
             }
-            else if (numberOfPlayers == "a")
+            else if (numberOfPlayers == "b")
             {
-
+                Console.WriteLine("Player Vs Player");
             }
             else
             {
                 Console.WriteLine("Invalid input.");
             }
+        }
+
+        public void Winner(string playerOneGesture, string playerTwoGesture)
+        {
 
         }
     }

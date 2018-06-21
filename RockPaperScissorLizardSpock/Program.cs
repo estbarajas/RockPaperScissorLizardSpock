@@ -10,13 +10,6 @@ namespace RockPaperScissorLizardSpock
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("--Welcome to RPSLS--\n");
-            Console.WriteLine("Enter name:");
-
-
-            Console.ReadLine();
-
         }
     }
 }

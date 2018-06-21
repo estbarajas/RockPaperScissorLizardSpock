@@ -13,10 +13,5 @@ namespace RockPaperScissorLizardSpock
             this.name = "Computer";
             this.score = 0;
         }
-
-        public void chooseGesture()
-        {
-
-        }
     }
 }

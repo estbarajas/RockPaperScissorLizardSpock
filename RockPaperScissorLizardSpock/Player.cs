@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorLizardSpock
 {
-    abstract class Player
+   public abstract class Player
     {
         public string name;
         public double score;
-        public Gesture theGesture;
-
-        public Player()
-        {
-            
-        }
 
         public void getName()
         {
