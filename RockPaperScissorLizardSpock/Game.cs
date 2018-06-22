@@ -82,11 +82,27 @@ namespace RockPaperScissorLizardSpock
         {
             //while((winCondition != playerOne.score))
             //{
+
+            while ((playerOne.score < 2))
+            {
                 Console.WriteLine(playerOne.GetName() + " what gesture would you like to cast?");
                 gesture = Console.ReadLine();
-                Winner(playerOne.Gesture(gesture), playerTwo.Gesture("scissors"));
-                playerOne.IncreaseScore();
-                playerOne.GetScore();
+                Winner(playerOne.Gesture(gesture), playerTwo.Gesture("lizard"));
+            }
+
+            if ((playerOne.score >= 2))
+            {
+                Console.WriteLine("rektxD");
+            }
+            else
+            {
+                Console.WriteLine("omg bg");
+            }
+                //Console.WriteLine(playerOne.GetName() + " what gesture would you like to cast?");
+                //gesture = Console.ReadLine();
+                //Winner(playerOne.Gesture(gesture), playerTwo.Gesture("scissors"));
+                //playerOne.IncreaseScore();
+                //playerOne.GetScore();
             //}
         }
 
@@ -111,7 +127,7 @@ namespace RockPaperScissorLizardSpock
                 }
             }
 
-            if (playerOneGesture == "paper")
+            else if (playerOneGesture == "paper")
             {
                 if ((playerTwoGesture == "rock") || (playerTwoGesture == "spock"))
                 {
@@ -127,7 +143,7 @@ namespace RockPaperScissorLizardSpock
                 }
             }
 
-            if (playerOneGesture == "scissors")
+            else if (playerOneGesture == "scissors")
             {
                 if ((playerTwoGesture == "paper") || (playerTwoGesture == "lizard"))
                 {
@@ -143,7 +159,7 @@ namespace RockPaperScissorLizardSpock
                 }
             }
 
-            if (playerOneGesture == "lizard")
+            else if (playerOneGesture == "lizard")
             {
                 if ((playerTwoGesture == "spock") || (playerTwoGesture == "paper"))
                 {
@@ -159,7 +175,7 @@ namespace RockPaperScissorLizardSpock
                 }
             }
 
-            if (playerOneGesture == "spock")
+            else if (playerOneGesture == "spock")
             {
                 if ((playerTwoGesture == "scissors") || (playerTwoGesture == "rock"))
                 {
