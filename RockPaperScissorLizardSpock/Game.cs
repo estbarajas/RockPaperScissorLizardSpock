@@ -14,6 +14,7 @@ namespace RockPaperScissorLizardSpock
         public string numberOfPlayersOption;
         public double PlayerOneOrPlayerTwoMessageTracker;
         public string gesture;
+        public string gestureTwo;
 
         public Game()
         {
@@ -85,25 +86,20 @@ namespace RockPaperScissorLizardSpock
 
             while ((playerOne.score < 2))
             {
-                Console.WriteLine(playerOne.GetName() + " what gesture would you like to cast?");
+                Console.WriteLine("\n" + playerOne.GetName() + " what gesture would you like to cast?");
                 gesture = Console.ReadLine();
-                Winner(playerOne.Gesture(gesture), playerTwo.Gesture("lizard"));
+                Console.WriteLine("\n" + playerOne.GetName() + " chose: " + gesture + ".\n" + playerTwo.GetName() +" chose: " + gestureTwo + ".");
+                Winner(playerOne.Gesture(gesture), playerTwo.Gesture(gestureTwo));
             }
 
             if ((playerOne.score >= 2))
             {
-                Console.WriteLine("rektxD");
+                Console.WriteLine("good game");
             }
             else
             {
-                Console.WriteLine("omg bg");
+                Console.WriteLine("bad game");
             }
-                //Console.WriteLine(playerOne.GetName() + " what gesture would you like to cast?");
-                //gesture = Console.ReadLine();
-                //Winner(playerOne.Gesture(gesture), playerTwo.Gesture("scissors"));
-                //playerOne.IncreaseScore();
-                //playerOne.GetScore();
-            //}
         }
 
        
@@ -114,7 +110,7 @@ namespace RockPaperScissorLizardSpock
             {
                 if ((playerTwoGesture == "scissors") || (playerTwoGesture == "lizard"))
                 {
-                    Console.WriteLine("Human won");
+                    Console.WriteLine("Winner: " + playerOne.GetName() + "!");
                     playerOne.IncreaseScore();
                 }
                 else if (playerOneGesture == playerTwoGesture)

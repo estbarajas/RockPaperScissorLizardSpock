@@ -10,12 +10,10 @@ namespace RockPaperScissorLizardSpock
     {
         public string name;
         public double score;
-        List<string> listOfGestures;
-
+        
         public string GetName()
         {
             return name;
-            
         }
 
         public void IncreaseScore()
@@ -29,20 +27,6 @@ namespace RockPaperScissorLizardSpock
             Console.WriteLine("The player " + name + " has a score of " + score + ".");
         }
 
-        public string Gesture(string passedGesture)
-        {
-            string foundTheWord = "llun";
-            listOfGestures = new List<string>() {"rock", "paper", "scissors", "lizard", "spock"};
-            for (int i = 0; i < listOfGestures.Count; i++)
-            {
-                if (listOfGestures[i] == passedGesture.ToLower())
-                {
-                    //Console.WriteLine("Found the word " + listOfGestures[i] + " in index " + i);
-                    foundTheWord = listOfGestures[i];
-                }
-            }
-            //Console.WriteLine("Found the word in list" + foundTheWord);
-            return foundTheWord;
-        }
+        public abstract string Gesture(string passedGesture);
     }
 }
