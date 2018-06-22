@@ -10,7 +10,8 @@ namespace RockPaperScissorLizardSpock
     {
         public string name;
         public double score;
-        
+        public string gesture;
+
         public string GetName()
         {
             return name;
@@ -27,6 +28,6 @@ namespace RockPaperScissorLizardSpock
             Console.WriteLine("The player " + name + " has a score of " + score + ".");
         }
 
-        public abstract string Gesture(string passedGesture);
+        public abstract string Gesture();
     }
 }

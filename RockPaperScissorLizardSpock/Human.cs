@@ -9,26 +9,33 @@ namespace RockPaperScissorLizardSpock
     class Human: Player
     {
         List<string> listOfGestures;
+       
         public Human(string name)
         {
             this.name = name;
             this.score = 0;
         }
 
-        public override string Gesture(string passedGesture)
+        public override string Gesture()
         {
-            string foundTheWord = "llun";
-            listOfGestures = new List<string>() {"rock", "paper", "scissors", "lizard", "spock"};
-            for (int i = 0; i < listOfGestures.Count; i++)
+            bool continueLooping = true;
+            while(continueLooping)
             {
-                if (listOfGestures[i] == passedGesture.ToLower())
+                Console.WriteLine("\n" + name + " what gesture would you like to cast?");
+                string theGesture;
+                theGesture = Console.ReadLine();
+                
+                listOfGestures = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
+                for (int i = 0; i < listOfGestures.Count; i++)
                 {
-                    //Console.WriteLine("Found the word " + listOfGestures[i] + " in index " + i);
-                    foundTheWord = listOfGestures[i];
+                    if (listOfGestures[i] == theGesture.ToLower())
+                    {
+                        gesture = listOfGestures[i];
+                        continueLooping = false;
+                    }
                 }
-            }
-            //Console.WriteLine("Found the word in list" + foundTheWord);
-            return foundTheWord;
+            }  
+            return gesture;
         }
     }
 }

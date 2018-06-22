@@ -15,13 +15,14 @@ namespace RockPaperScissorLizardSpock
             this.score = 0;
         }
 
-        public override string Gesture(string passedGesture)
+        public override string Gesture()
         {
             listOfGestures = new List<string>() {"rock", "paper", "scissors", "lizard", "spock"};
             Random random = new Random();
             int randomIndex = random.Next(0, 5);
-            Console.WriteLine("ITS UHHH: FOR COMPUTER: " + listOfGestures[randomIndex]);
-            return listOfGestures[randomIndex];
+            string randomListGesture = listOfGestures[randomIndex];
+            Console.WriteLine(randomListGesture);
+            return randomListGesture;
         }
     }
 }
