@@ -12,6 +12,12 @@ namespace RockPaperScissorLizardSpock
         public double score;
         List<string> listOfGestures;
 
+        public string setName()
+        {
+            Console.WriteLine("Enter a name for the player");
+            string test = Console.ReadLine();
+            return test;
+        }
 
         public void getName()
         {
@@ -32,41 +38,17 @@ namespace RockPaperScissorLizardSpock
         public string Gesture(string passedGesture)
         {
             string foundTheWord = "llun";
-            listOfGestures = new List<string>() {"Rock", "Paper", "Scissors", "Lizard", "Spock"};
-            foreach(string gesture in listOfGestures)
+            listOfGestures = new List<string>() {"rock", "paper", "scissors", "lizard", "spock"};
+            for (int i = 0; i < listOfGestures.Count; i++)
             {
-                if(passedGesture.Equals(gesture.ToLower()))
+                if (listOfGestures[i] == passedGesture.ToLower())
                 {
-                    foundTheWord = gesture;
+                    //Console.WriteLine("Found the word " + listOfGestures[i] + " in index " + i);
+                    foundTheWord = listOfGestures[i];
                 }
             }
-            Console.WriteLine(foundTheWord);
+            //Console.WriteLine("Found the word in list" + foundTheWord);
             return foundTheWord;
-        }
-
-        public void Beats(Player player)
-        {
-            switch ("rock")
-            {
-                case "rock":
-                    Console.WriteLine("");
-                    break;
-                case "paper":
-                    Console.WriteLine("");
-                    break;
-                case "scissor":
-                    Console.WriteLine("");
-                    break;
-                case "lizard":
-                    Console.WriteLine("");
-                    break;
-                case "spock":
-                    Console.WriteLine("");
-                    break;
-                default:
-                    Console.WriteLine("Not a valid gesture.");
-                    break;
-            }
         }
     }
 }

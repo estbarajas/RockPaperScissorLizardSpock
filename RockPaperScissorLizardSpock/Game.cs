@@ -8,8 +8,8 @@ namespace RockPaperScissorLizardSpock
 {
     class Game
     {
-        public Player theHuman;
-        public Player theComputer;
+        public Player playerOne;
+        public Player tplayerTwo;
         public double winCondition;
         public string numberOfPlayers;
 
@@ -20,7 +20,10 @@ namespace RockPaperScissorLizardSpock
 
         public void MainMenu()
         {
-            SetPlayers();
+            SetPlayers(); //finish
+            //theHuman = new Human("Juan"); //finish
+            Console.WriteLine(playerOne.Gesture("SPOcK")); //finished
+            Winner(playerOne.Gesture("rock"), playerOne.Gesture("paper"));
         }
 
         public void SetPlayers() //initiate the player objects
@@ -29,6 +32,8 @@ namespace RockPaperScissorLizardSpock
             numberOfPlayers = Console.ReadLine();
             if (numberOfPlayers == "a")
             {
+                playerOne = new Human("Juan");
+                playerOne.getName();
                 Console.WriteLine("Player Vs Computer");
             }
             else if (numberOfPlayers == "b")
@@ -43,7 +48,85 @@ namespace RockPaperScissorLizardSpock
 
         public void Winner(string playerOneGesture, string playerTwoGesture)
         {
+            if (playerOneGesture == "rock")
+            {
+                if ((playerTwoGesture == "scissors") || (playerTwoGesture == "lizard"))
+                {
+                    Console.WriteLine("Human won");
+                }
+                else if (playerOneGesture == playerTwoGesture)
+                {
+                    Console.WriteLine("Tie tbvh");
+                }
+                else
+                {
+                    Console.WriteLine("Computer won");
+                }
+            }
 
+            if (playerOneGesture == "paper")
+            {
+                if ((playerTwoGesture == "rock") || (playerTwoGesture == "spock"))
+                {
+                    Console.WriteLine("Human won");
+                }
+                else if (playerOneGesture == playerTwoGesture)
+                {
+                    Console.WriteLine("Tie tbvh");
+                }
+                else
+                {
+                    Console.WriteLine("Computer won");
+                }
+            }
+
+            if (playerOneGesture == "scissors")
+            {
+                if ((playerTwoGesture == "paper") || (playerTwoGesture == "lizard"))
+                {
+                    Console.WriteLine("Human won");
+                }
+                else if (playerOneGesture == playerTwoGesture)
+                {
+                    Console.WriteLine("Tie tbvh");
+                }
+                else
+                {
+                    Console.WriteLine("Computer won");
+                }
+            }
+
+            if (playerOneGesture == "lizard")
+            {
+                if ((playerTwoGesture == "spock") || (playerTwoGesture == "paper"))
+                {
+                    Console.WriteLine("Human won");
+                }
+                else if (playerOneGesture == playerTwoGesture)
+                {
+                    Console.WriteLine("Tie tbvh");
+                }
+                else
+                {
+                    Console.WriteLine("Computer won");
+                }
+            }
+
+            if (playerOneGesture == "spock")
+            {
+                if ((playerTwoGesture == "scissors") || (playerTwoGesture == "rock"))
+                {
+                    Console.WriteLine("Human won");
+                }
+                else if (playerOneGesture == playerTwoGesture)
+                {
+                    Console.WriteLine("Tie tbvh");
+                }
+                else
+                {
+                    Console.WriteLine("Computer won");
+                }
+            }
         }
     }
 }
