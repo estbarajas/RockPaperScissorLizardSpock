@@ -12,25 +12,19 @@ namespace RockPaperScissorLizardSpock
         public double score;
         List<string> listOfGestures;
 
-        public string setName()
+        public string GetName()
         {
-            Console.WriteLine("Enter a name for the player");
-            string test = Console.ReadLine();
-            return test;
+            return name;
+            
         }
 
-        public void getName()
-        {
-            Console.WriteLine("The player is named " + name + ".");
-        }
-
-        public void increaseScore()
+        public void IncreaseScore()
         {
             score++;
-            getScore();
+            GetScore();
         }
 
-        public void getScore()
+        public void GetScore()
         {
             Console.WriteLine("The player " + name + " has a score of " + score + ".");
         }
