@@ -42,8 +42,6 @@ namespace RockPaperScissorLizardSpock
                 }
                 else if (numberOfPlayersOption.ToLower() == "b")
                 {
-
-                    Console.WriteLine("Don't want to be here.");
                     EnterNameMessage(numberOfPlayersOption);
                     playerOne = new Human(Console.ReadLine());
                     EnterNameMessage(numberOfPlayersOption);
@@ -81,17 +79,18 @@ namespace RockPaperScissorLizardSpock
 
         public void GamePlay()
         {
-            while ((playerOne.score < 2) || (playerTwo.score < 2))
+            do
             {
                 Winner(playerOne.Gesture(), playerTwo.Gesture());
-            }
+            } while ((playerOne.score < 2) && (playerTwo.score < 2));
+
             if ((playerOne.score >= 2))
             {
-                Console.WriteLine("good game");
+                Console.WriteLine("\n" + playerOne.GetName() + " has won the game!");
             }
-            else
+            else if ((playerTwo.score <= 2))
             {
-                Console.WriteLine("bad game");
+                Console.WriteLine("\n" + playerTwo.GetName() + " has won the game!");
             }
         }
 
@@ -114,7 +113,6 @@ namespace RockPaperScissorLizardSpock
                     playerTwo.IncreaseScore();
                 }
             }
-
             else if (playerOneGesture == "paper")
             {
                 if ((playerTwoGesture == "rock") || (playerTwoGesture == "spock"))
@@ -132,7 +130,6 @@ namespace RockPaperScissorLizardSpock
                     playerTwo.IncreaseScore();
                 }
             }
-
             else if (playerOneGesture == "scissors")
             {
                 if ((playerTwoGesture == "paper") || (playerTwoGesture == "lizard"))
@@ -150,7 +147,6 @@ namespace RockPaperScissorLizardSpock
                     playerTwo.IncreaseScore();
                 }
             }
-
             else if (playerOneGesture == "lizard")
             {
                 if ((playerTwoGesture == "spock") || (playerTwoGesture == "paper"))
@@ -168,7 +164,6 @@ namespace RockPaperScissorLizardSpock
                     playerTwo.IncreaseScore();
                 }
             }
-
             else if (playerOneGesture == "spock")
             {
                 if ((playerTwoGesture == "scissors") || (playerTwoGesture == "rock"))

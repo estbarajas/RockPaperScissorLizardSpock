@@ -21,7 +21,7 @@ namespace RockPaperScissorLizardSpock
             Random random = new Random();
             int randomIndex = random.Next(0, 5);
             string randomListGesture = listOfGestures[randomIndex];
-            Console.WriteLine(randomListGesture);
+            Console.WriteLine(name + " casted: " +randomListGesture);
             return randomListGesture;
         }
     }

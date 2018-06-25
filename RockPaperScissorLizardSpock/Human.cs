@@ -23,8 +23,7 @@ namespace RockPaperScissorLizardSpock
             {
                 Console.WriteLine("\n" + name + " what gesture would you like to cast?");
                 string theGesture;
-                theGesture = Console.ReadLine();
-                
+                theGesture = Console.ReadLine();   
                 listOfGestures = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
                 for (int i = 0; i < listOfGestures.Count; i++)
                 {
@@ -34,7 +33,8 @@ namespace RockPaperScissorLizardSpock
                         continueLooping = false;
                     }
                 }
-            }  
+            }
+            Console.WriteLine("\n" + name + " casted: " + gesture);
             return gesture;
         }
     }
